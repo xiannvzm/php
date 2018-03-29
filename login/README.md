@@ -1,4 +1,4 @@
-###php用户登入与注销(session)
+###php用户登入与注销(使用session)
 - 文件
 	- index.php	（主页）
 	- login.php (登录页面)
