@@ -5,7 +5,11 @@ php学习笔记
 可带标签
 	echo "<h1>Hello World! </h1>"; 
  
+①onclick="javascript:window.location.href='URL'"
+②onclick="location='URL'"
+③onclick="window.location.href='URL?id=11'"
 
+onclick="javascript:history.back(-1);"
 
 大小写敏感
 	所有变量
