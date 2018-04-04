@@ -31,7 +31,7 @@
 	 </tr>		
 	 <tr align="center">
 		 <td>用 户 名：</td>
-		 <td><input onchange="automatic()" type="text" id="username" value="<?php echo $_COOKIE['name'];?>" name="username"></td>
+		 <td><input onchange="automatic()" type="text" id="username" value="<?php if(isset($_COOKIE['name'])) echo $_COOKIE['name'];?>" name="username"></td>
 	 </tr>
 	 <tr align="center">
 		 <td>密码：</td>
@@ -41,9 +41,17 @@
 		 <td>记住用户名和密码</td>
 		 <td>
 		 	<?php 
+			setcookie('remember','1',time()+3600);
 		 		if($_COOKIE['remember'] == 1)
-		 			{?><input type="checkbox" name="remember" value="1" checked><?php }
-		 		else{($_COOKIE['remember'] == "")?><input type="checkbox" name="remember" value="1"><?php }?>
+		 		{	
+			?>
+			<input type="checkbox" name="remember" value="1" checked>
+			<?php 
+			}else{
+				($_COOKIE['remember'] == "")?><input type="checkbox" name="remember" value="1">
+			<?php
+				}
+			?>
 		 			
 		 </td>
 	 </tr>
